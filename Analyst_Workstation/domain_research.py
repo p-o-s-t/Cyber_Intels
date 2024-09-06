@@ -53,7 +53,7 @@ with open(filename, 'w') as f:
     f.write("[-----------------URLScan.io------------------]\n")
     headers = {'API-Key':'<URLScanKey>','Content-Type':'application/json'}
     data = {"url": endpoint, "visibility": "unlisted"}
-    response = requests.post('https://urlscan.io/api/v1/scan/',headers=headers, data=json.dumps(data))
+    response = requests.post('https://urlscan.io/api/v1/scan/',headers=headers, data=json.dumps(data), timeout=60)
     f.write(jprint(response.json()))
 
 
@@ -61,14 +61,14 @@ with open(filename, 'w') as f:
     f.write("\n\n[--------------Security Trails----------------]\n")
     url = f"https://api.securitytrails.com/v1/history/{domain}/dns/a"
     headers = {"accept": "application/json","APIKEY": "<SecurityTrailsKey>"}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=60)
     f.write(jprint(response.json()))
 
     # Get information from Virus Total
     f.write("\n\n[----------------Virus Total------------------]\n")
     url = f"https://www.virustotal.com/api/v3/domains/{domain}/votes"
     headers = {"accept":"application/json","x-apikey": "<VirusTotalKey>"}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=60)
     f.write(jprint(response.json()))
 
 # open the file for you

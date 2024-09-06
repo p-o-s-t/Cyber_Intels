@@ -46,7 +46,7 @@ def VirusTotalIP(ioc):
         "accept": "application/json",
         "x-apikey": "<VirusTotalKey>"
     }
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=60)
     if response.status_code == 200:
         json_data = json.loads(response.text)
         totalScore = (json_data['data']['attributes']['last_analysis_stats']['harmless']) + (json_data['data']['attributes']['last_analysis_stats']['malicious']) + (json_data['data']['attributes']['last_analysis_stats']['suspicious']) + (json_data['data']['attributes']['last_analysis_stats']['undetected'])
@@ -62,7 +62,7 @@ def VirusTotalDomain(ioc):
         "accept": "application/json",
         "x-apikey": "<VirusTotalKey"
     }
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, timeout=60)
     if response.status_code == 200:
         json_data = json.loads(response.text)
         totalScore = (json_data['data']['attributes']['last_analysis_stats']['harmless']) + (json_data['data']['attributes']['last_analysis_stats']['malicious']) + (json_data['data']['attributes']['last_analysis_stats']['suspicious']) + (json_data['data']['attributes']['last_analysis_stats']['undetected'])
