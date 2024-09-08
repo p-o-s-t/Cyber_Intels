@@ -4,6 +4,7 @@ import requests
 import json
 from datetime import date
 import os
+from security import safe_requests
 
 """ 
 TO-DO:
@@ -61,14 +62,14 @@ with open(filename, 'w') as f:
     f.write("\n\n[--------------Security Trails----------------]\n")
     url = f"https://api.securitytrails.com/v1/history/{domain}/dns/a"
     headers = {"accept": "application/json","APIKEY": "<SecurityTrailsKey>"}
-    response = requests.get(url, headers=headers)
+    response = safe_requests.get(url, headers=headers)
     f.write(jprint(response.json()))
 
     # Get information from Virus Total
     f.write("\n\n[----------------Virus Total------------------]\n")
     url = f"https://www.virustotal.com/api/v3/domains/{domain}/votes"
     headers = {"accept":"application/json","x-apikey": "<VirusTotalKey>"}
-    response = requests.get(url, headers=headers)
+    response = safe_requests.get(url, headers=headers)
     f.write(jprint(response.json()))
 
 # open the file for you

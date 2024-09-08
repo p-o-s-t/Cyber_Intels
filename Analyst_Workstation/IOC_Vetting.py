@@ -15,12 +15,11 @@ TO-DO (as of 17 DEC 2023):
     - Remove hardcoded API key(s) and read keys in from a different file
     - Add a separate function for IPv6?  
 """
-
-import requests
 import json
 import re
 #import time # Won't be necessary if possible to get access to a non-Public API key for VirusTotal and other services
 import datetime
+from security import safe_requests
 
 # Get datetimegroup of analysis
 dtg = datetime.datetime.utcnow()
@@ -46,7 +45,7 @@ def VirusTotalIP(ioc):
         "accept": "application/json",
         "x-apikey": "<VirusTotalKey>"
     }
-    response = requests.get(url, headers=headers)
+    response = safe_requests.get(url, headers=headers)
     if response.status_code == 200:
         json_data = json.loads(response.text)
         totalScore = (json_data['data']['attributes']['last_analysis_stats']['harmless']) + (json_data['data']['attributes']['last_analysis_stats']['malicious']) + (json_data['data']['attributes']['last_analysis_stats']['suspicious']) + (json_data['data']['attributes']['last_analysis_stats']['undetected'])
@@ -62,7 +61,7 @@ def VirusTotalDomain(ioc):
         "accept": "application/json",
         "x-apikey": "<VirusTotalKey"
     }
-    response = requests.get(url, headers=headers)
+    response = safe_requests.get(url, headers=headers)
     if response.status_code == 200:
         json_data = json.loads(response.text)
         totalScore = (json_data['data']['attributes']['last_analysis_stats']['harmless']) + (json_data['data']['attributes']['last_analysis_stats']['malicious']) + (json_data['data']['attributes']['last_analysis_stats']['suspicious']) + (json_data['data']['attributes']['last_analysis_stats']['undetected'])
