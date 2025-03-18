@@ -54,7 +54,7 @@ with open(filename, 'w') as f:
     f.write("[-----------------URLScan.io------------------]\n")
     headers = {'API-Key':'<URLScanKey>','Content-Type':'application/json'}
     data = {"url": endpoint, "visibility": "unlisted"}
-    response = requests.post('https://urlscan.io/api/v1/scan/',headers=headers, data=json.dumps(data))
+    response = requests.post('https://urlscan.io/api/v1/scan/',headers=headers, data=json.dumps(data), timeout=60)
     f.write(jprint(response.json()))
 
 
