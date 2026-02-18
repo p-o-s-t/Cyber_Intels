@@ -1,0 +1,403 @@
+{
+  "type": "bundle",
+  "id": "bundle--24fd372c-001e-4485-9b93-202562468c06",
+  "spec_version": "2.1",
+  "created": "2026-02-06T23:56:55.384Z",
+  "modified": "2026-02-06T23:56:55.384Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--760a59c9-58f5-4da9-96ee-ce33abe7d029",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:01:36.571Z",
+      "modified": "2026-02-06T23:56:55.384Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--a2acc0f7-f74f-41f6-aa2e-18e5584c5eae",
+      "start_refs": [
+        "attack-action--f7bbe102-e784-476b-b8b5-99bc6491d2f3"
+      ],
+      "name": "CyberAv3ngers",
+      "scope": "threat-actor",
+      "external_references": [
+        {
+          "source_name": "MITRE",
+          "description": "G1027",
+          "url": "https://attack.mitre.org/groups/G1027/"
+        },
+        {
+          "source_name": "MITRE",
+          "description": "C0031",
+          "url": "https://attack.mitre.org/campaigns/C0031/"
+        },
+        {
+          "source_name": "DHS/CISA",
+          "description": " IRGC-Affiliated Cyber Actors Exploit PLCs in Multiple Sectors, Including US Water and Wastewater Systems Facilities",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+        },
+        {
+          "source_name": "AP News",
+          "description": "Breaches by Iran-affiliated hackers spanned multiple U.S. states, federal agencies say",
+          "url": "https://apnews.com/article/hackers-iran-israel-water-utilities-critical-infrastructure-cisa-554b2aa969c8220016ab2ef94bd7635b"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--a2acc0f7-f74f-41f6-aa2e-18e5584c5eae",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.384Z",
+      "modified": "2026-02-06T23:56:55.384Z",
+      "name": "MITRE",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--bb8aa4c3-0955-4377-b8f5-aff8c45eb39d",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "name": "CyberAv3ngers",
+      "description": "The CyberAv3ngers are a suspected Iranian Government Islamic Revolutionary Guard Corps (IRGC)-affiliated APT group. The CyberAv3ngers have been known to be active since at least 2020, with disputed and false claims of critical infrastructure compromises in Israel.\n\nIn 2023, the CyberAv3ngers engaged in a global targeting and hacking of the Unitronics Programmable Logic Controller (PLC) with Human-Machine Interface (HMI). This PLC can be found in multiple sectors, including water and wastewater, energy, food and beverage manufacturing, and healthcare. The most notable feature of this attack was the defacement of the devices user interface.",
+      "threat_actor_types": [
+        "Hacktivist"
+      ],
+      "sophistication": "Low",
+      "resource_level": "Low",
+      "primary_motivation": "Further Iranian goals"
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--71f64e7e-42cb-4a75-a5fa-edbbeb6b912e",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "name": "Unitronics Defacement Campaign",
+      "description": "The Unitronics Defacement Campaign was a collection of intrusions across multiple sectors by the CyberAv3ngers, where threat actors engaged in a seemingly opportunistic and global targeting and defacement of Unitronics Vision Series Programmable Logic Controller (PLC) with Human-Machine Interface (HMI). The sectors that these PLCs can be commonly found in are water and wastewater, energy, food and beverage manufacturing, and healthcare. The most notable feature of this attack was the defacement of the PLCs' HMIs.",
+      "first_seen": "2023-11-22T00:00:00.000Z",
+      "last_seen": "2024-01-01T00:00:00.000Z",
+      "objective": "Ideological, Defacement, Disruption"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f7bbe102-e784-476b-b8b5-99bc6491d2f3",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Internet Accessible Device",
+      "tactic_id": "TA0108",
+      "tactic_ref": "x-mitre-tactic--69da72d2-f550-41c5-ab9e-e8255707f28a",
+      "technique_id": "T0883",
+      "technique_ref": "attack-pattern--f8df6b57-14bc-425f-9a91-6f59f6799307",
+      "description": "During the Unitronics Defacement Campaign, the CyberAv3ngers exploited devices connected to the public internet, such as internet connected Unitronics Programmable Logic Controller (PLC) with Human-Machine Interface (HMI) and networking equipment such as cellular modems found in OT environments.",
+      "effect_refs": [
+        "attack-action--4a0f8226-c933-41a1-9cf4-8a7487588aef"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4a0f8226-c933-41a1-9cf4-8a7487588aef",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Default Credentials",
+      "tactic_id": "TA0109",
+      "tactic_ref": "x-mitre-tactic--51c25a9e-8615-40c0-8afd-1da578847924",
+      "technique_id": "T0812",
+      "technique_ref": "attack-pattern--8bb4538f-f16f-49f0-a431-70b5444c7349",
+      "description": "During the Unitronics Defacement Campaign, the CyberAv3ngers discovered and exploited default credentials found on many Unitronics Programmable Logic Controller (PLC) Human-Machine Interface (HMI). For many of these devices, the default password was set to ‘1111’.",
+      "effect_refs": [
+        "attack-condition--d48975d2-59d9-4366-bf65-91611fb09a21",
+        "attack-condition--6a69c60d-217e-4f44-ab2b-14a137e6d92e"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--34a58396-2fdb-42fe-b4ad-2c7efc62fc44",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Denial of Service",
+      "tactic_id": "TA0107",
+      "tactic_ref": "x-mitre-tactic--298fe907-7931-4fd2-8131-2814dd493134",
+      "technique_id": "T0814",
+      "technique_ref": "attack-pattern--1b22b676-9347-4c55-9a35-ef0dc653db5b",
+      "description": "During the Unitronics Defacement Campaign, the CyberAv3ngers defaced controllers’ Human-Machine Interface (HMI), which prevented multiple entities from being able to operate their devices normally. Additionally, the CyberAv3ngers caused a communications failure in a remote pumping station.\n\nThe actors disabled the upload and download functions of the PLC device to prevent the device operators from taking down the splash page. Additionally, the actors enabled password protection for the upload settings, preventing device operators from changing the programming remotely.\n\nThe actors changed the default port number for communicating remotely with the PLC device (from 20256 to 20257)",
+      "effect_refs": [
+        "attack-action--ceb4b9d4-8092-4c5a-908c-5317cdef858f",
+        "attack-action--988a988a-0b91-4622-8a07-4816705bdf76",
+        "attack-action--82683508-97c3-430e-8134-4cd4c0c0731f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ceb4b9d4-8092-4c5a-908c-5317cdef858f",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Loss of Availability",
+      "tactic_id": "TA0105",
+      "tactic_ref": "x-mitre-tactic--77542f83-70d0-40c2-8a9d-ad2eb8b00279",
+      "technique_id": "T0826",
+      "technique_ref": "attack-pattern--b5b9bacb-97f2-4249-b804-47fd44de1f95",
+      "description": "During the Unitronics Defacement Campaign, the CyberAv3ngers caused multiple businesses to halt operations due to the unavailability of the Programmable Logic Controller (PLC) and Human-Machine Interface (HMI). These victims covered multiple sectors."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--988a988a-0b91-4622-8a07-4816705bdf76",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Loss of Productivity and Revenue",
+      "tactic_id": "TA0105",
+      "tactic_ref": "x-mitre-tactic--77542f83-70d0-40c2-8a9d-ad2eb8b00279",
+      "technique_id": "T0828",
+      "technique_ref": "attack-pattern--63b6942d-8359-4506-bfb3-cf87aa8120ee",
+      "description": "During the Unitronics Defacement Campaign, the CyberAv3ngers caused multiple businesses to halt operations in their industrial environments, impacting their typical business operations. These victims covered multiple sectors."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--82683508-97c3-430e-8134-4cd4c0c0731f",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Loss of View",
+      "tactic_id": "TA0105",
+      "tactic_ref": "x-mitre-tactic--77542f83-70d0-40c2-8a9d-ad2eb8b00279",
+      "technique_id": "T0829",
+      "technique_ref": "attack-pattern--138979ba-0430-4de6-a128-2fc0b056ba36",
+      "description": "During the Unitronics Defacement Campaign, the CyberAv3ngers replaced the existing graphic on the Programmable Logic Controller (PLC) Human-Machine Interface (HMI) with their own, thereby preventing PLC owners and operators from viewing PLC information on the HMI.\n\nThe actors uploaded a splash page with the aforementioned defacement message to the HMI screen, which prevented  perators from reading anything the display screen would normally show, such as input and output readings. In at least one instance the actors displayed a text file with the same message on an older device that could not display a graphic image."
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--d48975d2-59d9-4366-bf65-91611fb09a21",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Default credentials for Unitronics PLCs have not been changed or had no password.",
+      "on_true_refs": [
+        "attack-operator--7ad6480e-deb3-4ae9-b79e-a877ea5b4da3"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--6a69c60d-217e-4f44-ab2b-14a137e6d92e",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Default credentials for Unitronics HMIs have not been changed or had no password.",
+      "on_true_refs": [
+        "attack-operator--7ad6480e-deb3-4ae9-b79e-a877ea5b4da3"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--7ad6480e-deb3-4ae9-b79e-a877ea5b4da3",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--800fccc6-9fe4-4cbf-bc99-3d41dfa9c783",
+        "attack-action--5afa169c-04a5-4f14-80d0-5cf4e66e83cf"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--ca48b1b8-09b4-49d2-867d-cc6d55ffa0f3",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "abstract": "Defacement Image",
+      "content": "You have been hacked, down with Israel. Every equipment ‘made\nin Israel’ is CyberAv3ngers legal target.”",
+      "object_refs": [
+        "attack-action--82683508-97c3-430e-8134-4cd4c0c0731f"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--800fccc6-9fe4-4cbf-bc99-3d41dfa9c783",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Stored Data Manipulation",
+      "technique_id": "T1565.001",
+      "technique_ref": "attack-pattern--1cfcb312-b8d7-47a4-b560-4b16cc677292",
+      "description": "The actors erased the original ladder logic file on the device and downloaded their own. Their ladder logic file contained no inputs or outputs. Since the programmed ladder logic is responsible for directing the functioning of the device, the replacement ladder logic file prevented the compromised devices from operating as intended.",
+      "effect_refs": [
+        "attack-operator--5a69fb8e-42d3-4706-be53-06034bd527e5"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--a8426ef5-03bf-49e5-b1db-2022727f221b",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "abstract": "Default Password",
+      "content": "1111",
+      "object_refs": [
+        "attack-action--4a0f8226-c933-41a1-9cf4-8a7487588aef"
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--b9a2e468-db64-47d7-8a27-8bd9122b346e",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "abstract": "TCP Port 20256",
+      "content": "Cyber actors are actively targeting TCP 20256 after identifying it through network probing as a port associated to Unitronics PLC. Once identified, they leverage scripts specific to PCOM/TCP to query and validate the system, allowing for further probing and connection. If available, use PCOM/TCP filters to parse out the packets.",
+      "object_refs": [
+        "attack-action--f7bbe102-e784-476b-b8b5-99bc6491d2f3"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5afa169c-04a5-4f14-80d0-5cf4e66e83cf",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Account Access Removal",
+      "tactic_id": "TA0040",
+      "tactic_ref": "x-mitre-tactic--5569339b-94c2-49ee-afb3-2222936582c8",
+      "technique_id": "T1531",
+      "technique_ref": "attack-pattern--b24e2a20-3b3d-4bf0-823b-1ed765398fb0",
+      "description": "The actors renamed the compromised devices, which delayed the device operators from accessing\nthe devices remotely as the device name was a required field for facilitating remote connections",
+      "effect_refs": [
+        "attack-operator--5a69fb8e-42d3-4706-be53-06034bd527e5"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--5a69fb8e-42d3-4706-be53-06034bd527e5",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--34a58396-2fdb-42fe-b4ad-2c7efc62fc44"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d643836-cf1e-49ff-955d-91fc25780c02",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--bb8aa4c3-0955-4377-b8f5-aff8c45eb39d",
+      "target_ref": "campaign--71f64e7e-42cb-4a75-a5fa-edbbeb6b912e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--437e5b38-65e0-4fe0-a9f3-65be680fad03",
+      "spec_version": "2.1",
+      "created": "2026-02-06T23:56:55.385Z",
+      "modified": "2026-02-06T23:56:55.385Z",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--71f64e7e-42cb-4a75-a5fa-edbbeb6b912e",
+      "target_ref": "attack-action--f7bbe102-e784-476b-b8b5-99bc6491d2f3"
+    }
+  ]
+}

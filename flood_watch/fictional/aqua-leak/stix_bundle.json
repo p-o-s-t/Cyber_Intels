@@ -1,0 +1,170 @@
+{
+  "type": "bundle",
+  "id": "bundle--c1da88da-9929-4819-9431-8f100b28d189",
+  "spec_version": "2.1",
+  "created": "2026-02-14T01:44:59.980Z",
+  "modified": "2026-02-14T01:44:59.980Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--e6becc47-2453-469f-b73f-9439c944a471",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:29.355Z",
+      "modified": "2026-02-14T01:44:59.980Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--7af93c7a-fa5e-4264-8761-634cba44fa75",
+      "start_refs": [
+        "attack-action--5808f878-608a-4b64-9737-3f3160d082c4"
+      ],
+      "name": "Untitled Document",
+      "scope": "emulation-plan"
+    },
+    {
+      "type": "identity",
+      "id": "identity--7af93c7a-fa5e-4264-8761-634cba44fa75",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.980Z",
+      "modified": "2026-02-14T01:44:59.980Z",
+      "name": "analyst-dz62443",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "id": "identity--d6534818-a11a-4ad0-a9eb-57b63a249b59",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "name": "AquaLeak Monitoring",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--a5eb938b-ebbc-4f04-b7b3-a8d7160fd9e1",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "name": "AquaLeak",
+      "description": "Opportunistic hacktivist group targeting small water utilities for extortion and visibility.",
+      "sophistication": "medium",
+      "resource_level": "individual",
+      "primary_motivation": "financial-gain"
+    },
+    {
+      "type": "malware",
+      "id": "malware--7c71cc1b-a329-4d2b-80c7-04a2a787a88b",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "name": "FloodGate",
+      "description": "Automated scanner and exploiter for OT devices.",
+      "is_family": true
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--066cdad4-a0b2-4ea3-8277-20fd6cec6ea4",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "name": "HMI Defacement",
+      "description": "Replacing HMI screens with custom messages to disrupt operations and claim responsibility."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--5808f878-608a-4b64-9737-3f3160d082c4",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Denial of View",
+      "tactic_id": "TA0105",
+      "tactic_ref": "x-mitre-tactic--77542f83-70d0-40c2-8a9d-ad2eb8b00279",
+      "technique_id": "T0815",
+      "technique_ref": "attack-pattern--56ddc820-6cfb-407f-850b-52c035d123ac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--918ee749-0173-4a48-9ba6-74b697499d64",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "relationship_type": "related-to",
+      "source_ref": "identity--d6534818-a11a-4ad0-a9eb-57b63a249b59",
+      "target_ref": "threat-actor--a5eb938b-ebbc-4f04-b7b3-a8d7160fd9e1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a21e948-bd26-428c-b205-688526b68804",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--a5eb938b-ebbc-4f04-b7b3-a8d7160fd9e1",
+      "target_ref": "attack-action--5808f878-608a-4b64-9737-3f3160d082c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce91001f-2acf-46e0-a73d-e09ec9380540",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--7c71cc1b-a329-4d2b-80c7-04a2a787a88b",
+      "target_ref": "attack-pattern--066cdad4-a0b2-4ea3-8277-20fd6cec6ea4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1ec6a9f-c1e1-4920-a83f-5785dfdc4dbf",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:44:59.981Z",
+      "modified": "2026-02-14T01:44:59.981Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--5808f878-608a-4b64-9737-3f3160d082c4",
+      "target_ref": "attack-pattern--066cdad4-a0b2-4ea3-8277-20fd6cec6ea4"
+    }
+  ]
+}

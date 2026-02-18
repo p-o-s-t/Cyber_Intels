@@ -1,0 +1,214 @@
+{
+    "type": "bundle",
+    "id": "bundle--9405aaae-cf00-4030-a326-70b96ea6bbb5",
+    "objects": [
+        {
+            "id": "location--e2c889aa-b0b1-4f05-b90c-a0a1a155dc62",
+            "spec_version": "2.1",
+            "type": "location",
+            "country": "US",
+            "administrative_area": "US-DC",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+            "created": "2023-03-02T16:48:57.959Z",
+            "extensions": {
+                "extension-definition--3a65884d-005a-4290-8335-cb2d778a83ce": {
+                    "extension_type": "property-extension",
+                    "identifier": "isa:guide.19001.ACS3-9e0cd50e-6efc-45b3-8a3d-b6376541c9c5",
+                    "create_date_time": "2023-03-02T16:48:57.959Z",
+                    "responsible_entity_custodian": "USA.DHS.NCCIC",
+                    "responsible_entity_originator": "USA.DHS.NCCIC",
+                    "policy_reference": "urn:isa:policy:acs:ns:v3.0?privdefault=deny&sharedefault=permit",
+                    "control_set": {
+                        "classification": "U",
+                        "formal_determination": [
+                            "INFORMATION-DIRECTLY-RELATED-TO-CYBERSECURITY-THREAT",
+                            "PUBREL"
+                        ]
+                    },
+                    "authority_reference": [
+                        "urn:isa:authority:ais"
+                    ],
+                    "access_privilege": [
+                        {
+                            "privilege_action": "CISAUSES",
+                            "rule_effect": "permit",
+                            "privilege_scope": {
+                                "entity": [
+                                    "ALL"
+                                ],
+                                "permitted_nationalities": [
+                                    "ALL"
+                                ],
+                                "permitted_organizations": [
+                                    "ALL"
+                                ],
+                                "shareability": [
+                                    "ALL"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "attack-pattern--9a280255-c770-4d42-ae50-aff1896ebded",
+            "type": "attack-pattern",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Credential Access - Brute Force [T1110]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--b4097d04-408a-4279-aac4-40ae3dd0710f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-09-13T00:00:00Z",
+            "pattern": "[file:hashes.'SHA-256' = '440B5385D3838E3F6BC21220CAA83B65CD5F3618DAEA676F271C3671650CE9A3']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--95a83932-6e7a-4024-b3f5-d878d78fd1d0",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-09-13T00:00:00Z",
+            "pattern": "[file:hashes.'SHA-1' = '66AE21571FAEE1E258549078144325DC9DD60303']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--eb825787-5cf3-423a-aec9-42d611cc61e1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-09-13T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '178.162.227.180']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--695afe84-7eb6-4004-a7e1-2ad80bfa5131",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-09-13T00:00:00Z",
+            "pattern": "[file:hashes.MD5 = 'BA284A4B508A7ABD8070A427386E93E0']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b74311f5-0fc4-4fda-a6c3-3a13cf1d3069",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2018-05-14T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '185.162.235.206']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--3d8bb40f-01ef-46f9-a5c0-004a12e40155",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "source_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "relationship_type": "located-at",
+            "target_ref": "location--e2c889aa-b0b1-4f05-b90c-a0a1a155dc62",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "report--c578cb44-e440-486d-80a4-8cf6256c1d53",
+            "type": "report",
+            "spec_version": "2.1",
+            "created": "2023-12-04T20:38:04.000Z",
+            "modified": "2023-12-04T20:38:04.000Z",
+            "name": "AA23-335A: IRGC-Affiliated Cyber Actors Exploit PLCs in Multiple Sectors, Including U.S. Water and Wastewater Systems Facilities",
+            "description": "The Federal Bureau of Investigation (FBI), Cybersecurity and Infrastructure Security Agency (CISA), National Security Agency (NSA), Environmental Protection Agency (EPA), and the Israel National Cyber Directorate (INCD)\\u2014hereafter referred  to  as \"the authoring agencies\" - are disseminating this joint Cybersecurity Advisory (CSA) to highlight continued malicious cyber activity against operational technology devices by Iranian Government Islamic Revolutionary Guard Corps IRGC)-affiliated Advanced Persistent Threat (APT) cyber actors. \r\n\r\nThe IRGC is an Iranian military organization that the United States designated as a foreign terrorist organization in 2019. IRGC-affiliated cyber actors using the persona \\u201cCyberAv3ngers\\u201d are actively targeting and compromising Israeli-made Unitronics Vision Series programmable logic controllers  (PLCs). These PLCs are commonly used in the Water and Wastewater Systems (WWS) Sector and are additionally used in other industries including, but not limited to, energy, food and beverage manufacturing, and healthcare. The PLCs may be rebranded and appear as different manufacturers and companies. In addition to the recent CISA Alert, the authoring agencies are releasing this joint CSA to share indicators of compromise (IOCs) and tactics, techniques, and procedures (TTPs) associated with IRGC cyber operations.\r\n",
+            "published": "2023-12-02T00:00:00Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "attack-pattern--9a280255-c770-4d42-ae50-aff1896ebded",
+                "indicator--b4097d04-408a-4279-aac4-40ae3dd0710f",
+                "indicator--95a83932-6e7a-4024-b3f5-d878d78fd1d0",
+                "indicator--eb825787-5cf3-423a-aec9-42d611cc61e1",
+                "indicator--695afe84-7eb6-4004-a7e1-2ad80bfa5131",
+                "indicator--b74311f5-0fc4-4fda-a6c3-3a13cf1d3069",
+                "relationship--3d8bb40f-01ef-46f9-a5c0-004a12e40155"
+            ],
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}

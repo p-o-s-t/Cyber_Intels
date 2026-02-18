@@ -1,0 +1,246 @@
+{
+  "type": "bundle",
+  "id": "bundle--48dca7d9-9414-40e2-b11b-2897666b0c74",
+  "spec_version": "2.1",
+  "created": "2026-02-14T01:40:12.351Z",
+  "modified": "2026-02-14T01:40:12.351Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--9e593d58-1062-437f-b456-6aaf3dc03c51",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:27:39.536Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--6e8ee9e2-c31d-44be-b3b4-476c6f28e86c",
+      "start_refs": [
+        "attack-action--bb349ddc-5bc2-40d0-8061-971693a41fd4"
+      ],
+      "name": "Untitled Document",
+      "scope": "incident"
+    },
+    {
+      "type": "identity",
+      "id": "identity--6e8ee9e2-c31d-44be-b3b4-476c6f28e86c",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.351Z",
+      "modified": "2026-02-14T01:40:12.351Z",
+      "name": "Analyst-dz62443",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "id": "identity--a1c29670-c660-457c-a7b5-17ce04a3d8c1",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.352Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "name": "HydroPhantom Intelligence",
+      "identity_class": "organization"
+    },
+    {
+      "type": "threat-actor",
+      "id": "threat-actor--7ef78110-b7f5-4d2d-9b14-b6c8d2ded311",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.352Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "name": "HydroPhantom",
+      "description": "Sophisticated state-sponsored actor targeting WWS SCADA systems for prepositioning.",
+      "sophistication": "high",
+      "resource_level": "government",
+      "primary_motivation": "organizational-gain"
+    },
+    {
+      "type": "malware",
+      "id": "malware--b61c50af-24c8-41f9-8e54-e1f769aae357",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.352Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "name": "DripFeed",
+      "description": "Modular ICS reconnaissance malware.",
+      "is_family": false
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7ef79fa5-a4c8-4420-a2e2-cb9aa9c0c1bb",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.352Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "name": "PLC Firmware Modification",
+      "description": "Modifying the firmware of PLCs to insert persistent backdoors."
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--f1eeca99-7f5c-4928-b6da-0eb04a6b91b5",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.352Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "name": "HydroPhantom",
+      "first_seen": "2025-08-06T04:07:58.000Z",
+      "goals": [
+        "Geopolitical",
+        "Strategic",
+        "Regime Protection"
+      ],
+      "resource_level": "High",
+      "primary_motivation": "Prepositioning"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--9aa01669-eae6-4a15-b21a-938bec14ec74",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.352Z",
+      "modified": "2026-02-14T01:40:12.352Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "System Firmware",
+      "tactic_id": "TA0107",
+      "tactic_ref": "x-mitre-tactic--298fe907-7931-4fd2-8131-2814dd493134",
+      "technique_id": "T0857",
+      "technique_ref": "attack-pattern--b9160e77-ea9e-4ba9-b1c8-53a3c466b13d",
+      "description": "During DripFeed, the adversary initiated a firmware downgrade on impacted devices."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--bb349ddc-5bc2-40d0-8061-971693a41fd4",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Network Connection Enumeration",
+      "tactic_id": "TA0102",
+      "tactic_ref": "x-mitre-tactic--696af733-728e-49d7-8261-75fdc590f453",
+      "technique_id": "T0840",
+      "technique_ref": "attack-pattern--ea0c980c-5cf0-43a7-a049-59c4c207566e",
+      "description": "Adversaries may perform network connection enumeration to discover information about device communication patterns. If an adversary can inspect the state of a network connection with tools, such as Netstat, in conjunction with System Firmware, then they can determine the role of certain devices on the network. The adversary can also use Network Sniffing to watch network traffic for details about the source, destination, protocol, and content.",
+      "confidence": 90
+    },
+    {
+      "type": "malware",
+      "id": "malware--b1164899-5c15-4e69-92b9-6a6314484191",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "name": "DripDrop",
+      "description": "ICS malware that wipes firmware of control devices to prevent operation.",
+      "is_family": false
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--414de1de-7b07-4ef4-919a-2e789463b80e",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "identity--a1c29670-c660-457c-a7b5-17ce04a3d8c1",
+      "target_ref": "threat-actor--7ef78110-b7f5-4d2d-9b14-b6c8d2ded311"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ef4ecc0-1dfd-49de-8cac-17f958730655",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "threat-actor--7ef78110-b7f5-4d2d-9b14-b6c8d2ded311",
+      "target_ref": "attack-action--bb349ddc-5bc2-40d0-8061-971693a41fd4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4761e21a-1ade-401b-9c68-949d6edeab70",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--7ef79fa5-a4c8-4420-a2e2-cb9aa9c0c1bb",
+      "target_ref": "attack-action--9aa01669-eae6-4a15-b21a-938bec14ec74"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ced6266-3b8c-4de7-b988-c2b000ff056a",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "intrusion-set--f1eeca99-7f5c-4928-b6da-0eb04a6b91b5",
+      "target_ref": "threat-actor--7ef78110-b7f5-4d2d-9b14-b6c8d2ded311"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb004ecb-10ed-475d-973b-40ee2e31f1e4",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--bb349ddc-5bc2-40d0-8061-971693a41fd4",
+      "target_ref": "malware--b61c50af-24c8-41f9-8e54-e1f769aae357"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e85c5e5-12d6-4657-8154-d2aa56e70822",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--bb349ddc-5bc2-40d0-8061-971693a41fd4",
+      "target_ref": "attack-pattern--7ef79fa5-a4c8-4420-a2e2-cb9aa9c0c1bb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ba34fd9-6b5b-42ce-aef2-b419eddb8a9d",
+      "spec_version": "2.1",
+      "created": "2026-02-14T01:40:12.353Z",
+      "modified": "2026-02-14T01:40:12.353Z",
+      "relationship_type": "related-to",
+      "source_ref": "malware--b1164899-5c15-4e69-92b9-6a6314484191",
+      "target_ref": "attack-action--9aa01669-eae6-4a15-b21a-938bec14ec74"
+    }
+  ]
+}
