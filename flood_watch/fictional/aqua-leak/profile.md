@@ -16,7 +16,7 @@ AquaLeak aims for maximum visibility. They often deface HMIs and lock administra
 ## Opportunities
 Targeting internet-exposed industrial devices with weak or default passwords and unpatched CVEs in RDP services.
 
-## TTPs (MITRE ATT&CK for ICS)
+## TTPs
 - **TA0108 - Internet Accessible Device**: Scanning for exposed PLCs and HMIs.
 - **TA0109 - External Identity and Access Management**: Brute-forcing or using default credentials (1111, admin/admin).
 - **TA0105 - Impair Process Control**: Defacing HMI screens (T0829) and triggering emergency stop conditions (T0814).
